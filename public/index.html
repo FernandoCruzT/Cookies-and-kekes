@@ -1,0 +1,1131 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7041a5">
+  <title>Cookies and Kekes | Candyman</title>
+  <meta name="description" content="Descubre Cookies and Kekes de Candyman: pan de muerto, muffins, donas y galletas deliciosas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple: #7041a5;
+      --purple-dark: #48236e;
+      --lavender: #efe5ff;
+      --pink: #ffb9d2;
+      --cream: #fff9ef;
+      --yellow: #ffdf79;
+      --text: #352343;
+      --white: #ffffff;
+      --shadow: 0 12px 35px rgba(75, 39, 107, .10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 249, 239, .94);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #eee2f6;
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: var(--purple);
+      line-height: 1.1;
+    }
+
+    .logo span {
+      display: block;
+      color: #b36b9b;
+      font-size: .66rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-weight: 800;
+      font-size: .92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--purple);
+    }
+
+    .cart-button {
+      border: 0;
+      border-radius: 30px;
+      background: var(--purple);
+      color: white;
+      padding: 12px 19px;
+      font-weight: 900;
+      transition: .2s;
+    }
+
+    .cart-button:hover,
+    .primary-button:hover {
+      background: var(--purple-dark);
+      transform: translateY(-2px);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      padding: 78px 0 86px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 20%, #ffdfeb 0, transparent 28%),
+        radial-gradient(circle at 8% 90%, #e3d0ff 0, transparent 35%),
+        var(--lavender);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: white;
+      color: var(--purple);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: 1.3px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 5.7vw, 5.2rem);
+      line-height: 1.03;
+      letter-spacing: -3px;
+      font-weight: 900;
+    }
+
+    h1 .script {
+      font-family: 'Pacifico', cursive;
+      color: var(--purple);
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      max-width: 470px;
+      margin: 23px 0 29px;
+      color: #6c5b78;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .primary-button,
+    .secondary-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      padding: 14px 24px;
+      font-weight: 900;
+      transition: .2s;
+    }
+
+    .primary-button {
+      color: white;
+      background: var(--purple);
+      border: 0;
+    }
+
+    .secondary-button {
+      background: white;
+      color: var(--purple);
+      border: 2px solid #e6d5f8;
+    }
+
+    .secondary-button:hover {
+      border-color: var(--purple);
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      border-radius: 46% 46% 28px 28px;
+      box-shadow: 0 25px 65px #613b742b;
+      border: 8px solid white;
+    }
+
+    .floating-note {
+      position: absolute;
+      left: -24px;
+      bottom: 35px;
+      background: var(--yellow);
+      padding: 17px 22px;
+      border-radius: 20px;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+      transform: rotate(-5deg);
+    }
+
+    .floating-note span {
+      display: block;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
+    .hero-sparkle {
+      position: absolute;
+      top: 3px;
+      right: 0;
+      font-size: 3rem;
+    }
+
+    /* BENEFITS */
+    .benefits {
+      padding: 28px 0;
+      background: white;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .benefit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .benefit-icon {
+      width: 45px;
+      height: 45px;
+      border-radius: 15px;
+      background: var(--lavender);
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+    }
+
+    /* CATALOG */
+    .catalog {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading .mini-title {
+      color: #ad70b0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .76rem;
+      font-weight: 900;
+    }
+
+    h2 {
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      letter-spacing: -1px;
+      margin: 10px 0;
+      font-weight: 900;
+    }
+
+    .section-heading p {
+      color: #81738a;
+      line-height: 1.7;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform .25s, box-shadow .25s;
+      border: 1px solid #f3eaf7;
+    }
+
+    .product-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 45px #4c28691c;
+    }
+
+    .product-image-wrap {
+      position: relative;
+      height: 235px;
+      background: #f0e5f8;
+      overflow: hidden;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .product-card:hover .product-image {
+      transform: scale(1.06);
+    }
+
+    .product-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: white;
+      color: var(--purple);
+      padding: 7px 12px;
+      font-size: .72rem;
+      font-weight: 900;
+      border-radius: 20px;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .product-info p {
+      color: #8b7e92;
+      font-size: .88rem;
+      margin: 7px 0 18px;
+      min-height: 38px;
+      line-height: 1.5;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      color: var(--purple);
+      font-size: 1.55rem;
+      font-weight: 900;
+    }
+
+    .add-button {
+      border: 0;
+      background: var(--lavender);
+      color: var(--purple);
+      border-radius: 14px;
+      padding: 11px 15px;
+      font-weight: 900;
+      transition: .2s;
+    }
+
+    .add-button:hover {
+      background: var(--purple);
+      color: white;
+    }
+
+    /* BRAND BANNER */
+    .brand-banner {
+      padding: 65px 0;
+      background: var(--purple-dark);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-banner::before,
+    .brand-banner::after {
+      content: "✦";
+      position: absolute;
+      font-size: 8rem;
+      color: #ffffff12;
+    }
+
+    .brand-banner::before {
+      top: -25px;
+      left: 5%;
+    }
+
+    .brand-banner::after {
+      bottom: -50px;
+      right: 5%;
+    }
+
+    .brand-banner h2 {
+      color: white;
+    }
+
+    .brand-banner p {
+      color: #e4d4f1;
+      margin: 0 auto 25px;
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
+    .brand-banner .primary-button {
+      background: var(--yellow);
+      color: var(--purple-dark);
+    }
+
+    /* CART */
+    .cart-section {
+      padding: 75px 0;
+      background: #fff4fa;
+    }
+
+    .cart-box {
+      max-width: 760px;
+      margin: auto;
+      background: white;
+      border-radius: 25px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .cart-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .empty-cart {
+      color: #95879d;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .cart-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0e8f4;
+    }
+
+    .cart-row small {
+      display: block;
+      color: #93849c;
+      margin-top: 4px;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .quantity-controls button {
+      width: 30px;
+      height: 30px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--lavender);
+      color: var(--purple);
+      font-weight: 900;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 23px 0;
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    .checkout-button {
+      width: 100%;
+      padding: 15px;
+      border: 0;
+      border-radius: 15px;
+      color: white;
+      background: #238c59;
+      font-weight: 900;
+      font-size: 1rem;
+    }
+
+    .checkout-button:hover {
+      background: #176c43;
+    }
+
+    .checkout-note {
+      margin-top: 12px;
+      color: #95879d;
+      font-size: .82rem;
+      text-align: center;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #291638;
+      color: white;
+      padding: 42px 0 22px;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding-bottom: 28px;
+    }
+
+    .footer-logo {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--pink);
+    }
+
+    .footer-logo span {
+      display: block;
+      font-size: .72rem;
+      letter-spacing: 3px;
+      color: #c8afd7;
+    }
+
+    footer p {
+      color: #cbbbd5;
+      font-size: .9rem;
+      line-height: 1.8;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #ffffff20;
+      padding-top: 20px;
+      text-align: center;
+      font-size: .8rem;
+      color: #b7a3c5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 850px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 55px;
+      }
+
+      .hero-visual {
+        max-width: 580px;
+        margin: auto;
+      }
+
+      .hero-image {
+        height: 370px;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 13px;
+        font-size: .82rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      nav {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 1.05rem;
+      }
+
+      .nav-links a:not(.cart-link) {
+        display: none;
+      }
+
+      .cart-button {
+        padding: 10px 13px;
+      }
+
+      h1 {
+        font-size: 3.3rem;
+      }
+
+      .hero-image {
+        height: 300px;
+        border-radius: 35% 35% 22px 22px;
+      }
+
+      .floating-note {
+        left: -8px;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .benefit {
+        justify-content: flex-start;
+      }
+
+      .catalog {
+        padding: 65px 0;
+      }
+
+      .products-grid {
+        grid-template-columns: 1fr;
+        max-width: 390px;
+        margin: auto;
+      }
+
+      .product-image-wrap {
+        height: 250px;
+      }
+
+      .cart-box {
+        padding: 20px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <header>
+    <nav class="container">
+      <a href="#inicio" class="logo">
+        Cookies and Kekes
+        <span>by CANDYMAN</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#pedido">Pedidos</a>
+        <button class="cart-button" onclick="goToCart()">
+          🛒 <span id="cart-count">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PORTADA -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">🍪 UN ANTOJITO CAMBIA TU DÍA</span>
+
+          <h1>
+            Un mundo<br>
+            de <span class="script">dulzura</span>
+          </h1>
+
+          <p>
+            Bienvenido a Cookies and Kekes, el rincón más dulce de Candyman.
+            Descubre deliciosos panes, muffins, donas y galletitas
+            preparados para alegrar cada momento.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="#catalogo">
+              Descubrir catálogo →
+            </a>
+            <a class="secondary-button" href="#nosotros">
+              Nuestra historia ♡
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <span class="hero-sparkle">✨</span>
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1000&q=85"
+            alt="Deliciosa selección de panadería y repostería"
+          >
+          <div class="floating-note">
+            Hecho para disfrutar ♡
+            <span>Pequeños antojos, grandes sonrisas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="benefits">
+      <div class="container benefits-grid">
+        <div class="benefit">
+          <span class="benefit-icon">🧁</span>
+          <span>Delicias para cada antojo</span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">💜</span>
+          <span>Hecho con mucho cariño</span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon">💰</span>
+          <span>Precios para compartir</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="catalog" id="catalogo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="mini-title">NUESTRO CATÁLOGO</span>
+          <h2>¿Qué se te antoja hoy? 🍩</h2>
+          <p>Tu próxima felicidad está a solo un mordisco.</p>
+        </div>
+
+        <div class="products-grid">
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=700&q=80"
+                alt="Pan de muerto"
+                loading="lazy"
+              >
+              <span class="product-tag">DE TEMPORADA 🍂</span>
+            </div>
+            <div class="product-info">
+              <h3>Pan de muerto</h3>
+              <p>Un clásico de temporada para disfrutar y compartir.</p>
+              <div class="product-bottom">
+                <span class="price">$15</span>
+                <button class="add-button" onclick="addToCart('Pan de muerto', 15)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80"
+                alt="Muffin de chocolate"
+                loading="lazy"
+              >
+              <span class="product-tag">FAVORITO 🍫</span>
+            </div>
+            <div class="product-info">
+              <h3>Muffin de chocolate</h3>
+              <p>Suave, chocolatoso y perfecto para consentirte.</p>
+              <div class="product-bottom">
+                <span class="price">$30</span>
+                <button class="add-button" onclick="addToCart('Muffin de chocolate', 30)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=700&q=80"
+                alt="Muffins de vainilla"
+                loading="lazy"
+              >
+              <span class="product-tag">DULCE TENTACIÓN 🧁</span>
+            </div>
+            <div class="product-info">
+              <h3>Muffin de vainilla</h3>
+              <p>Delicado sabor a vainilla en cada delicioso bocado.</p>
+              <div class="product-bottom">
+                <span class="price">$30</span>
+                <button class="add-button" onclick="addToCart('Muffin de vainilla', 30)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80"
+                alt="Donas glaseadas"
+                loading="lazy"
+              >
+              <span class="product-tag">IRRESISTIBLES 🍩</span>
+            </div>
+            <div class="product-info">
+              <h3>Donas</h3>
+              <p>Suaves, deliciosas y listas para alegrarte el día.</p>
+              <div class="product-bottom">
+                <span class="price">$20</span>
+                <button class="add-button" onclick="addToCart('Donas', 20)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1558401391-7899b4bd5c0c?auto=format&fit=crop&w=700&q=80"
+                alt="Donitas pequeñas"
+                loading="lazy"
+              >
+              <span class="product-tag">MINI ANTOJO 💕</span>
+            </div>
+            <div class="product-info">
+              <h3>Donitas</h3>
+              <p>Pequeñas en tamaño, enormes en sabor.</p>
+              <div class="product-bottom">
+                <span class="price">$3</span>
+                <button class="add-button" onclick="addToCart('Donitas', 3)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img
+                class="product-image"
+                src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=700&q=80"
+                alt="Galletas de oreja"
+                loading="lazy"
+              >
+              <span class="product-tag">CRUJIENTES ✨</span>
+            </div>
+            <div class="product-info">
+              <h3>Galletas de oreja</h3>
+              <p>Un toque crujiente para acompañar tus momentos.</p>
+              <div class="product-bottom">
+                <span class="price">$10</span>
+                <button class="add-button" onclick="addToCart('Galletas de oreja', 10)">
+                  + Agregar
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MARCA -->
+    <section class="brand-banner" id="nosotros">
+      <div class="container">
+        <span class="mini-title">SOMOS CANDYMAN</span>
+        <h2>La vida sabe mejor con algo dulce 💜</h2>
+        <p>
+          Cookies and Kekes nació para convertir los pequeños antojos
+          en momentos especiales. Queremos que cada visita te deje
+          con una sonrisa y ganas de volver por algo más.
+        </p>
+        <a href="#catalogo" class="primary-button">
+          Encuentra tu favorito 🍪
+        </a>
+      </div>
+    </section>
+
+    <!-- CARRITO -->
+    <section class="cart-section" id="pedido">
+      <div class="container">
+        <div class="section-heading">
+          <span class="mini-title">TU ANTOJO, TU PEDIDO</span>
+          <h2>Arma tu cajita dulce 🛍️</h2>
+          <p>Agrega tus favoritos y consulta el total de tu compra.</p>
+        </div>
+
+        <div class="cart-box">
+          <h3>🛒 Tu carrito</h3>
+
+          <div id="cart-items">
+            <div class="empty-cart">
+              Todavía no hay dulces aquí. ¡Vamos por algo rico! 🍩
+            </div>
+          </div>
+
+          <div class="cart-total">
+            <span>Total</span>
+            <span id="cart-total">$0.00 MXN</span>
+          </div>
+
+          <button class="checkout-button" onclick="checkout()">
+            💬 Preparar pedido
+          </button>
+
+          <p class="checkout-note">
+            El pedido se preparará para enviarlo por WhatsApp.
+            Los precios están expresados en pesos mexicanos.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          Cookies and Kekes
+          <span>BY CANDYMAN</span>
+        </div>
+        <div>
+          <p>Un mundo de dulzura en cada mordisco. 🍪</p>
+          <p>Gracias por apoyar nuestro emprendimiento. 💜</p>
+        </div>
+        <div>
+          <p><a href="#inicio">Inicio</a> · <a href="#catalogo">Catálogo</a></p>
+          <p><a href="#pedido">Haz tu pedido</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> Cookies and Kekes · Una marca de Candyman.
+        Hecho con 💜
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // CARRITO DE COMPRAS
+    const cart = {};
+
+    const money = amount =>
+      amount.toLocaleString('es-MX', {
+        style: 'currency',
+        currency: 'MXN'
+      });
+
+    function addToCart(name, price) {
+      if (cart[name]) {
+        cart[name].quantity++;
+      } else {
+        cart[name] = { price, quantity: 1 };
+      }
+
+      renderCart();
+
+      // Lleva el producto agregado al carrito en dispositivos pequeños.
+      const button = document.getElementById('cart-count');
+      button.textContent = getItemCount();
+    }
+
+    function changeQuantity(name, amount) {
+      if (!cart[name]) return;
+
+      cart[name].quantity += amount;
+
+      if (cart[name].quantity <= 0) {
+        delete cart[name];
+      }
+
+      renderCart();
+    }
+
+    function getItemCount() {
+      return Object.values(cart).reduce(
+        (total, item) => total + item.quantity, 0
+      );
+    }
+
+    function getTotal() {
+      return Object.values(cart).reduce(
+        (total, item) => total + item.price * item.quantity, 0
+      );
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      const entries = Object.entries(cart);
+
+      document.getElementById('cart-count').textContent = getItemCount();
+      document.getElementById('cart-total').textContent = money(getTotal());
+
+      if (entries.length === 0) {
+        container.innerHTML = `
+          <div class="empty-cart">
+            Todavía no hay dulces aquí. ¡Vamos por algo rico! 🍩
+          </div>`;
+        return;
+      }
+
+      container.innerHTML = entries.map(([name, item]) => `
+        <div class="cart-row">
+          <div>
+            <strong>${name}</strong>
+            <small>${money(item.price)} por pieza</small>
+          </div>
+
+          <div class="quantity-controls">
+            <button
+              aria-label="Quitar una unidad de ${name}"
+              onclick="changeQuantity('${name}', -1)">−</button>
+            <strong>${item.quantity}</strong>
+            <button
+              aria-label="Agregar una unidad de ${name}"
+              onclick="changeQuantity('${name}', 1)">+</button>
+          </div>
+
+          <strong>${money(item.price * item.quantity)}</strong>
+        </div>
+      `).join('');
+    }
+
+    function goToCart() {
+      document.getElementById('pedido').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    function checkout() {
+      const entries = Object.entries(cart);
+
+      if (entries.length === 0) {
+        alert('¡Tu carrito está vacío! Agrega algo delicioso primero. 🍪');
+        return;
+      }
+
+      const lines = entries.map(([name, item]) =>
+        `• ${item.quantity} x ${name} — ${money(item.price * item.quantity)}`
+      );
+
+      const message = [
+        '¡Hola! Quiero hacer un pedido en Cookies and Kekes 🍪',
+        '',
+        ...lines,
+        '',
+        `Total: ${money(getTotal())}`,
+        '',
+        '¿Me pueden confirmar la disponibilidad y cómo recoger mi pedido?'
+      ].join('\n');
+
+      /*
+        CONFIGURACIÓN:
+        Sustituye 521234567890 por el número real de WhatsApp
+        de tu negocio, incluyendo el código de país (52 para México).
+        Usa únicamente números, sin +, espacios ni guiones.
+      */
+      const whatsappNumber = '';
+
+      if (!whatsappNumber) {
+        alert(
+          '¡Tu pedido está listo! 💜\n\n' +
+          message +
+          '\n\nPara activar el envío por WhatsApp, configura ' +
+          'el número de tu negocio en la función checkout().'
+        );
+        return;
+      }
+
+      const url =
+        'https://wa.me/' + whatsappNumber +
+        '?text=' + encodeURIComponent(message);
+
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+
+    renderCart();
+  </script>
+</body>
+</html>
